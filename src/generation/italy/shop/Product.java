@@ -62,6 +62,7 @@ public class Product {
     
     @Override
     public String toString() {
-        return "Code: " + code + "\nName: " + name + "\nBrand: " + brand + "\nPrice: " + price + "\nPrice with Iva: " + getIvaPrice();
+        return "Code: " + getCode() + "\nName: " + getName() + "\nBrand: " + getBrand() + "\nPrice: " 
+        + getPrice() + "\nPrice with Iva: " + getIvaPrice();
     }
 }
