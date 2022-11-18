@@ -28,7 +28,6 @@ public class Television extends Product {
 
     @Override
     public String toString() {
-        return "Code: " + getCode() + "\nName: " + getName() + "\nBrand: " + getBrand() + "\nPrice: " 
-        + getPrice() + "\nPrice with Iva: " + getIvaPrice() + "\nLength: " + getLength() + " cm\nHeight: " + getHeight() + " cm";
+        return super.toString() + "\nLength: " + getLength() + " cm\nHeight: " + getHeight() + " cm";
     }
 }

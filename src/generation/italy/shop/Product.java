@@ -4,10 +4,10 @@ public class Product {
     private int code;
     private String name;
     private String brand;
-    private float price;
+    private double price;
     private int iva;
 
-    public Product(int code, String name, String brand, float price, int iva){
+    public Product(int code, String name, String brand, double price, int iva){
         setCode(code);
         setName(name);
         setBrand(brand);
@@ -39,11 +39,11 @@ public class Product {
         this.brand = brand;
     }
 
-    public float getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(float price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
@@ -55,8 +55,8 @@ public class Product {
         this.iva = iva;
     }
 
-    public float getIvaPrice(){
-        float ivaPrice = price + ((price * iva) / 100);
+    public double getIvaPrice(){
+        double ivaPrice = price + ((price * iva) / 100);
         return ivaPrice;
     }
     

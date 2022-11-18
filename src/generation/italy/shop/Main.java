@@ -11,6 +11,8 @@ public class Main {
         Product tel = new Television(3, "Lg Tv Plus", "Lg", 300, 20, 70, 30);
         System.out.println(tel);
         System.out.print("------------------------------------\n");
-
+        Product hpn = new Headphone(4, "LG720", "LG", 75, 20, "Blue", true);
+        System.out.println(hpn);
+        System.out.print("------------------------------------\n");
     }
 }

@@ -28,7 +28,6 @@ public class Smartphone extends Product{
 
     @Override
     public String toString() {
-        return "Code: " + getCode() + "\nName: " + getName() + "\nBrand: " + getBrand() + "\nPrice: " 
-        + getPrice() + "\nPrice with Iva: " + getIvaPrice() + "\nImei Code: " + getImeiCode() + "\nMemory: " + memory;
+        return super.toString() + "\nImei Code: " + getImeiCode() + "\nMemory: " + memory;
     }
 }
