@@ -5,22 +5,21 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Catalog {
+    static int code = 0;
+    static String name;
+    static String brand;
+    static float price;
+    static int iva = 20;
+    static int imeiCode;
+    static int memory;
+    static float length;
+    static float height;
+    static String color;
+    static Boolean isWireless = true;
+    static Scanner sn = new Scanner(System.in);
     public static void main(String[] args) {
-        int code = 0;
-        String name;
-        String brand;
-        float price;
-        int iva = 20;
-        int imeiCode;
-        int memory;
-        float length;
-        float height;
-        String color;
-        Boolean isWireless = true;
-
         boolean isTrue = true;
         List<Product> catalog = new LinkedList<>();
-        Scanner sn = new Scanner(System.in);
         
         while (isTrue) {
             System.out.println("Si desidera inserire un prodotto? (s/n)");
@@ -37,13 +36,7 @@ public class Catalog {
                 System.out.println("Inserire il tipo di prodotto (Smartphone, Television, Headphone): ");
                 String prodType = sn.nextLine();
                 if (prodType.toLowerCase().matches("smartphone")) {
-                    code++;
-                    System.out.println("Inserire il nome:");
-                    name = sn.nextLine();
-                    System.out.println("Inserire il brand: ");
-                    brand = sn.nextLine();
-                    System.out.println("Inserire il prezzo");
-                    price = sn.nextFloat();
+                    setProductVariables();
                     System.out.println("Inserire IMEI code:");
                     imeiCode = sn.nextInt();
                     System.out.println("Inserire la quantità di memoria");
@@ -101,5 +94,15 @@ public class Catalog {
             System.out.println(catalog);
             System.out.print("------------------------------------\n");
         }
+    }
+
+    static public void setProductVariables(){
+        code++;
+        System.out.println("Inserire il nome:");
+        name = sn.nextLine();
+        System.out.println("Inserire il brand: ");
+        brand = sn.nextLine();
+        System.out.println("Inserire il prezzo");
+        price = sn.nextFloat();
     }
 }
